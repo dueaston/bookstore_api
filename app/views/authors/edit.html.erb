@@ -1,0 +1,16 @@
+<h1>Edit Author</h1>
+
+<%= form_with model: @author do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :bio %>
+  <%= form.text_area :bio %>
+
+  <%= form.submit "Update Author" %>
+<% end %>
+
+<%= link_to "Back", authors_path %>

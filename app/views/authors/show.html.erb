@@ -1,0 +1,8 @@
+<h1><%= @author.name %></h1>
+
+<p><strong>Email:</strong> <%= @author.email %></p>
+<p><strong>Bio:</strong> <%= @author.bio %></p>
+
+<%= link_to "Edit", edit_author_path(@author) %> |
+<%= link_to "Back", authors_path %>
+
