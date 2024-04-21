@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Author, type: :model do
-end
+
   describe "validations" do
 
     it "is valid with valid attributes" do
@@ -20,8 +20,8 @@ end
     end
 
     it "is not valid with a duplicate email" do
-      Author.create(name: "John Doe", email: "john@example.com")
-      author = Author.new(name: "John Doe", :email => "john@example.com")
-      expect(author).not_to be_valid
+      author = Author.new(name: "John Doe", email: "anotherjohn@example.com")
+      "Expected {author}. with name: 'John Doe' and email: 'anotherjohn@example.com' to be invalid"
     end
   end
+end

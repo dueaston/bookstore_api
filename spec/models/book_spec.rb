@@ -10,7 +10,7 @@ RSpec.describe Book, type: :model do
     end
 
     it "is not valid without a title" do
-      author = Author.create(name: "Example Author", :email "author@example.com")
+      author = Author.create(name: "Example Author", email: "author@example.com")
       book = Book.new(title: nil, author: author)
       expect(book).not_to be_valid
     end
